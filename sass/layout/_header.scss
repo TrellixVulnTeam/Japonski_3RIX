@@ -1,0 +1,75 @@
+.header {
+   height: 22vh;
+   background-color: $color-white;
+   position: relative;
+   padding-top: 3.3rem;
+   
+   &__logo-box {
+      position: absolute;
+      top: 3.5rem;
+      left: 3.5rem;
+   }
+
+   &__logo {
+      width: 8.4rem;
+      height: 8.4rem;
+      border-radius: 50%;
+      background-color: $color-primary;
+   }
+
+   &__textbox {
+      max-width: 80%;
+      margin: 0 auto;
+      padding-bottom: 1rem;
+   }
+}
+
+.navigation {
+   padding-top: 10rem;
+
+   &__link {
+      &:link,
+      &:visited {
+         font-weight: 700;
+         color: $color-black;
+      }
+
+      &:hover {
+         transform: translateY(-3px);
+         text-shadow: 0 1rem 2rem $color-grey;
+         transition: all .3s ease;
+      }
+
+      &:active,
+      &:focus {
+         -webkit-transform: translateY(10px);
+         transform: translateY(-1px);
+      }
+   }
+}
+
+.contacts {
+   max-width: 45%;
+   margin-left: auto;
+
+   &__link {
+      &:link,
+      &:visited {
+         font-size: 1.4rem;
+         font-weight: 700;
+         color: $color-black;
+         opacity: 30%;
+         padding-bottom: 1rem;
+         border-bottom: 1.5px solid transparent;
+      }
+
+      &:hover {
+         color: $color-primary;
+         border-bottom: 1.5px solid $color-primary;
+         opacity: 100%;
+         padding-bottom: 1rem;
+         transition: all .3s ease;
+      }
+   }
+}
+

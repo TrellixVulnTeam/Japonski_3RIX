@@ -1,0 +1,22 @@
+body {
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.8rem;
+   font-weight: 400;
+   color: $color-black;
+}
+
+ul {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+}
+
+.link{
+   &:link,
+   &:visited  {
+      display: inline-block;
+      text-decoration: none;
+   }
+}
+
+

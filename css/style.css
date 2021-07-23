@@ -1,0 +1,161 @@
+/*
+0 - 600px: Phone (PHONE)
+600 - 900px: Tablet portrait (TAB-PORT)
+900 - 1200px: Tablet landscape (TAB-LAND)
+(1200 - 1800): normal styles 
+1800px +: Big desktop (BIG-DESKTOP)
+
+ORDER: Base + typography > general layout + grid > page layout > components
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #000; }
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; }
+
+.link:link, .link:visited {
+  display: inline-block;
+  text-decoration: none; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.row {
+  max-width: 100rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media only screen and (max-width: 75em) {
+    .row {
+      padding: 0 3rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem; } }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
+.header {
+  height: 22vh;
+  background-color: #fff;
+  position: relative;
+  padding-top: 3.3rem; }
+  .header__logo-box {
+    position: absolute;
+    top: 3.5rem;
+    left: 3.5rem; }
+  .header__logo {
+    width: 8.4rem;
+    height: 8.4rem;
+    border-radius: 50%;
+    background-color: #be1d31; }
+  .header__textbox {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-bottom: 1rem; }
+
+.navigation {
+  padding-top: 10rem; }
+  .navigation__link:link, .navigation__link:visited {
+    font-weight: 700;
+    color: #000; }
+  .navigation__link:hover {
+    transform: translateY(-3px);
+    text-shadow: 0 1rem 2rem #cccccc;
+    transition: all .3s ease; }
+  .navigation__link:active, .navigation__link:focus {
+    -webkit-transform: translateY(10px);
+    transform: translateY(-1px); }
+
+.contacts {
+  max-width: 45%;
+  margin-left: auto; }
+  .contacts__link:link, .contacts__link:visited {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    opacity: 30%;
+    padding-bottom: 1rem;
+    border-bottom: 1.5px solid transparent; }
+  .contacts__link:hover {
+    color: #be1d31;
+    border-bottom: 1.5px solid #be1d31;
+    opacity: 100%;
+    padding-bottom: 1rem;
+    transition: all .3s ease; }
