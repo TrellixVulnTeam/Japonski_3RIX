@@ -45,6 +45,30 @@ ul {
   display: inline-block;
   text-decoration: none; }
 
+.heading-primary {
+  padding: 14.4rem 0 7rem 0;
+  text-align: center;
+  color: #fff; }
+
+.heading-tertiary--main {
+  font-size: 2.4rem;
+  margin-top: 1.5rem; }
+
+.heading-tertiary--sub {
+  font-size: 1.8rem;
+  color: #000;
+  opacity: 0.5; }
+
+.oferta-box:not(:last-child) {
+  border-right: 1px solid #000; }
+
+.oferta-box__text {
+  position: relative;
+  font-size: 1.4rem;
+  color: #000;
+  opacity: 0.5;
+  padding: 2.3rem 0 6.6rem 0; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -68,6 +92,13 @@ ul {
 
 .u-margin-top-huge {
   margin-top: 10rem !important; }
+
+.btn-text {
+  color: #be1d31;
+  font-weight: 700;
+  text-decoration: none;
+  position: absolute;
+  bottom: 2.7rem; }
 
 .row {
   max-width: 100rem;
@@ -112,10 +143,9 @@ ul {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
-  height: 22vh;
   background-color: #fff;
   position: relative;
-  padding-top: 3.3rem; }
+  padding: 3.3rem 0 1rem 0; }
   .header__logo-box {
     position: absolute;
     top: 3.5rem;
@@ -127,11 +157,10 @@ ul {
     background-color: #be1d31; }
   .header__textbox {
     max-width: 80%;
-    margin: 0 auto;
-    padding-bottom: 1rem; }
+    margin: 0 auto; }
 
 .navigation {
-  padding-top: 10rem; }
+  padding-top: 5rem; }
   .navigation__link:link, .navigation__link:visited {
     font-weight: 700;
     color: #000; }
@@ -159,3 +188,34 @@ ul {
     opacity: 100%;
     padding-bottom: 1rem;
     transition: all .3s ease; }
+
+main {
+  background-color: #5b0d13;
+  z-index: -10;
+  position: relative; }
+  main:after {
+    content: "";
+    background: url(../../img/bg-pattern.png);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -8; }
+
+.section-oferta {
+  background-color: #fff;
+  position: relative; }
+  .section-oferta::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.oferty {
+  display: flex;
+  justify-content: space-between; }
+
+.oferta-box {
+  display: block;
+  width: 25%;
+  padding: 2rem; }

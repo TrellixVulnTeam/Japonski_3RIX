@@ -1,8 +1,7 @@
 .header {
-   height: 22vh;
    background-color: $color-white;
    position: relative;
-   padding-top: 3.3rem;
+   padding: 3.3rem 0 1rem 0;
    
    &__logo-box {
       position: absolute;
@@ -20,12 +19,11 @@
    &__textbox {
       max-width: 80%;
       margin: 0 auto;
-      padding-bottom: 1rem;
    }
 }
 
 .navigation {
-   padding-top: 10rem;
+   padding-top: 5rem;
 
    &__link {
       &:link,
