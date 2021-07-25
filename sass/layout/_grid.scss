@@ -3,13 +3,13 @@
    margin: 0 auto;
 
    //Everything except last child
-   &:not(:last-child) {
-        margin-bottom: $gutter-vertical;
+   // &:not(:last-child) {
+   //      margin-bottom: $gutter-vertical;
 
-        @include respond(tab-port) {
-            margin-bottom: $gutter-vertical-small;
-         }
-   }
+   //      @include respond(tab-port) {
+   //          margin-bottom: $gutter-vertical-small;
+   //       }
+   // }
 
    @include respond(tab-land) {
       padding: 0 3rem;

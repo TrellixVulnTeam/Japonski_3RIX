@@ -1,17 +1,18 @@
-main {
+.bg {
    background-color: rgba(91, 13, 19, 1);
    z-index: -10;
    position: relative;
 
    &:after {
       content: "";
-      background: url(../../img/bg-pattern.png);
+      background: url(../img/bg-pattern.png);
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
       position: absolute;
-      z-index: -8;  
+      z-index: -8;
+      height: 40rem;
    }
 }
 
@@ -30,4 +31,14 @@ main {
    display: block;
    width: 25%;
    padding: 2rem;
+}
+
+.section-promocja {
+   display: flex;
+   justify-content: space-between;
+   background-color: $color-primary;
+   display: flex;
+   align-items: center;
+   padding: 3rem;
+
 }

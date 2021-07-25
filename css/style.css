@@ -50,6 +50,10 @@ ul {
   text-align: center;
   color: #fff; }
 
+.heading-secondary {
+  color: #fff;
+  font-size: 3.2rem; }
+
 .heading-tertiary--main {
   font-size: 2.4rem;
   margin-top: 1.5rem; }
@@ -68,6 +72,11 @@ ul {
   color: #000;
   opacity: 0.5;
   padding: 2.3rem 0 6.6rem 0; }
+
+.section-promocja__paragraph {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700; }
 
 .u-center-text {
   text-align: center !important; }
@@ -100,14 +109,19 @@ ul {
   position: absolute;
   bottom: 2.7rem; }
 
+.btn-big {
+  display: inline-block;
+  color: #be1d31;
+  background-color: #fff;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 1.3rem 3.5rem; }
+
 .row {
   max-width: 100rem;
   margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-    @media only screen and (max-width: 56.25em) {
-      .row:not(:last-child) {
-        margin-bottom: 6rem; } }
   @media only screen and (max-width: 75em) {
     .row {
       padding: 0 3rem; } }
@@ -189,19 +203,20 @@ ul {
     padding-bottom: 1rem;
     transition: all .3s ease; }
 
-main {
+.bg {
   background-color: #5b0d13;
   z-index: -10;
   position: relative; }
-  main:after {
+  .bg:after {
     content: "";
-    background: url(../../img/bg-pattern.png);
+    background: url(../img/bg-pattern.png);
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -8; }
+    z-index: -8;
+    height: 40rem; }
 
 .section-oferta {
   background-color: #fff;
@@ -219,3 +234,11 @@ main {
   display: block;
   width: 25%;
   padding: 2rem; }
+
+.section-promocja {
+  display: flex;
+  justify-content: space-between;
+  background-color: #be1d31;
+  display: flex;
+  align-items: center;
+  padding: 3rem; }
