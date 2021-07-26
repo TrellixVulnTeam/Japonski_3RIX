@@ -1,6 +1,10 @@
+main {
+   z-index: 70;
+}
+
 .bg {
    background-color: rgba(91, 13, 19, 1);
-   z-index: -10;
+   z-index: 4;
    position: relative;
 
    &:after {
@@ -11,7 +15,7 @@
       bottom: 0;
       right: 0;
       position: absolute;
-      z-index: -8;
+      z-index: -1;
       height: 40rem;
    }
 }
@@ -40,5 +44,37 @@
    display: flex;
    align-items: center;
    padding: 3rem;
+}
 
+.section-opinie {
+   background-color: $color-white;
+   padding: 6.8rem 0;
+   border-bottom: 1px solid #7a7a7a;
+}
+
+.opinia {
+   width: 95%;
+   margin: 0 auto;
+   text-align: center;
+   position: relative;
+
+   &__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 5rem;
+
+      &--l {
+         left: 0;
+      }
+
+      &--r {
+         right: 0;
+      }
+   }
+}
+
+.owl-nav {
+   width: 0;
+   height: 0;
 }

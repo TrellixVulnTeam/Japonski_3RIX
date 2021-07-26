@@ -28,6 +28,10 @@ ul {
 .heading-secondary {
    color: $color-white;
    font-size: 3.2rem;
+
+   &--black {
+      color: $color-black;
+   }
 }
 
 .heading-tertiary {
@@ -63,6 +67,14 @@ ul {
       color: $color-white;
       font-size: 2.4rem;
       font-weight: 700;
+   }
+}
+
+.section-opinie {
+
+   &__paragraph {
+      font-style: italic;
+      padding: 3rem 0 3.7rem 0;
    }
 }
 

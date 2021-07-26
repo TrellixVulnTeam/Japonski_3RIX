@@ -53,6 +53,8 @@ ul {
 .heading-secondary {
   color: #fff;
   font-size: 3.2rem; }
+  .heading-secondary--black {
+    color: #000; }
 
 .heading-tertiary--main {
   font-size: 2.4rem;
@@ -77,6 +79,10 @@ ul {
   color: #fff;
   font-size: 2.4rem;
   font-weight: 700; }
+
+.section-opinie__paragraph {
+  font-style: italic;
+  padding: 3rem 0 3.7rem 0; }
 
 .u-center-text {
   text-align: center !important; }
@@ -203,9 +209,12 @@ ul {
     padding-bottom: 1rem;
     transition: all .3s ease; }
 
+main {
+  z-index: 70; }
+
 .bg {
   background-color: #5b0d13;
-  z-index: -10;
+  z-index: 4;
   position: relative; }
   .bg:after {
     content: "";
@@ -215,7 +224,7 @@ ul {
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -8;
+    z-index: -1;
     height: 40rem; }
 
 .section-oferta {
@@ -242,3 +251,27 @@ ul {
   display: flex;
   align-items: center;
   padding: 3rem; }
+
+.section-opinie {
+  background-color: #fff;
+  padding: 6.8rem 0;
+  border-bottom: 1px solid #7a7a7a; }
+
+.opinia {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative; }
+  .opinia__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5rem; }
+    .opinia__arrow--l {
+      left: 0; }
+    .opinia__arrow--r {
+      right: 0; }
+
+.owl-nav {
+  width: 0;
+  height: 0; }
