@@ -1,0 +1,30 @@
+.section-oferta {
+   background-color: $color-white;;
+   position: relative;
+   
+   @include clearfix;
+}
+
+.oferty {
+   display: flex;
+   justify-content: space-between;
+}
+
+.oferta-box {
+   width: 25%;
+   padding: 2.5rem;
+
+   &:not(:last-child) {
+   border-right: 1px solid $color-black;
+   }
+
+   &__text {
+      position: relative;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: $color-black;
+      opacity: 0.5;
+      padding-bottom: 6rem;
+   }
+}
+

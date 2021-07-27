@@ -1,0 +1,37 @@
+.section-opinie {
+   background-color: $color-white;
+   padding: 6.8rem 0;
+   border-bottom: 1px solid #7a7a7a;
+
+   &__paragraph {
+      font-style: italic;
+      padding-bottom: 2rem;
+   }
+}
+
+.opinia {
+   width: 95%;
+   margin: 0 auto;
+   text-align: center;
+   position: relative;
+
+   &__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 5rem;
+
+      &--l {
+         left: 0;
+      }
+
+      &--r {
+         right: 0;
+      }
+   }
+}
+
+.owl-nav {
+   width: 0;
+   height: 0;
+}

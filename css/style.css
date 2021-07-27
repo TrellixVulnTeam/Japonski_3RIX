@@ -45,6 +45,9 @@ ul {
   display: inline-block;
   text-decoration: none; }
 
+.heading-primary, .heading-secondary, .heading-tertiary {
+  font-weight: 700; }
+
 .heading-primary {
   padding: 14.4rem 0 7rem 0;
   text-align: center;
@@ -52,37 +55,27 @@ ul {
 
 .heading-secondary {
   color: #fff;
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  text-align: center;
+  padding-bottom: 3rem; }
   .heading-secondary--black {
     color: #000; }
 
 .heading-tertiary--main {
   font-size: 2.4rem;
-  margin-top: 1.5rem; }
+  margin-bottom: 2.3rem; }
 
-.heading-tertiary--sub {
+.heading-tertiary--small {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.6rem; }
+
+.subheading {
+  display: block;
   font-size: 1.8rem;
   color: #000;
-  opacity: 0.5; }
-
-.oferta-box:not(:last-child) {
-  border-right: 1px solid #000; }
-
-.oferta-box__text {
-  position: relative;
-  font-size: 1.4rem;
-  color: #000;
   opacity: 0.5;
-  padding: 2.3rem 0 6.6rem 0; }
-
-.section-promocja__paragraph {
-  color: #fff;
-  font-size: 2.4rem;
-  font-weight: 700; }
-
-.section-opinie__paragraph {
-  font-style: italic;
-  padding: 3rem 0 3.7rem 0; }
+  margin-bottom: 1.5rem; }
 
 .u-center-text {
   text-align: center !important; }
@@ -109,6 +102,7 @@ ul {
   margin-top: 10rem !important; }
 
 .btn-text {
+  display: inline-block;
   color: #be1d31;
   font-weight: 700;
   text-decoration: none;
@@ -123,7 +117,109 @@ ul {
   line-height: 2.8rem;
   font-weight: 700;
   text-decoration: none;
-  padding: 1.3rem 3.5rem; }
+  padding: 1.3rem 3.5rem;
+  border-radius: 2%; }
+
+.section-oferta {
+  background-color: #fff;
+  position: relative; }
+  .section-oferta::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.oferty {
+  display: flex;
+  justify-content: space-between; }
+
+.oferta-box {
+  width: 25%;
+  padding: 2.5rem; }
+  .oferta-box:not(:last-child) {
+    border-right: 1px solid #000; }
+  .oferta-box__text {
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.5;
+    padding-bottom: 6rem; }
+
+.section-opinie {
+  background-color: #fff;
+  padding: 6.8rem 0;
+  border-bottom: 1px solid #7a7a7a; }
+  .section-opinie__paragraph {
+    font-style: italic;
+    padding-bottom: 2rem; }
+
+.opinia {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative; }
+  .opinia__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5rem; }
+    .opinia__arrow--l {
+      left: 0; }
+    .opinia__arrow--r {
+      right: 0; }
+
+.owl-nav {
+  width: 0;
+  height: 0; }
+
+.section-features {
+  background-color: #fff;
+  padding-top: 5.3rem; }
+  .section-features__heading {
+    padding-bottom: 4.5rem; }
+  .section-features__btn {
+    left: 50%;
+    transform: translate(-50%); }
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+  padding-bottom: 8.2rem;
+  position: relative; }
+
+.feature-box {
+  width: 32%;
+  text-align: center; }
+  .feature-box:before {
+    display: block;
+    content: "";
+    background-color: #c4c4c4;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 2.2rem; }
+  .feature-box__text {
+    font-size: 1.4rem;
+    line-height: 2.1rem; }
+
+.feature-box:hover:before {
+  background-color: #be1d31; }
+
+.section-promocja {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #be1d31;
+  padding: 3rem; }
+  .section-promocja__heading {
+    padding-bottom: 0; }
+  .section-promocja__paragraph {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 700; }
 
 .row {
   max-width: 100rem;
@@ -226,52 +322,3 @@ main {
     position: absolute;
     z-index: -1;
     height: 40rem; }
-
-.section-oferta {
-  background-color: #fff;
-  position: relative; }
-  .section-oferta::after {
-    content: "";
-    display: table;
-    clear: both; }
-
-.oferty {
-  display: flex;
-  justify-content: space-between; }
-
-.oferta-box {
-  display: block;
-  width: 25%;
-  padding: 2rem; }
-
-.section-promocja {
-  display: flex;
-  justify-content: space-between;
-  background-color: #be1d31;
-  display: flex;
-  align-items: center;
-  padding: 3rem; }
-
-.section-opinie {
-  background-color: #fff;
-  padding: 6.8rem 0;
-  border-bottom: 1px solid #7a7a7a; }
-
-.opinia {
-  width: 95%;
-  margin: 0 auto;
-  text-align: center;
-  position: relative; }
-  .opinia__arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 5rem; }
-    .opinia__arrow--l {
-      left: 0; }
-    .opinia__arrow--r {
-      right: 0; }
-
-.owl-nav {
-  width: 0;
-  height: 0; }

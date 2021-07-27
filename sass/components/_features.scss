@@ -1,0 +1,47 @@
+.section-features {
+   background-color: $color-white;
+   padding-top: 5.3rem;  
+   
+   &__heading {
+      padding-bottom: 4.5rem;
+   }
+   
+   &__btn {
+      left: 50%;
+      transform: translate(-50%);
+   }
+}
+
+.features {
+   display: flex;
+   justify-content: space-between;
+   margin: 0 auto;
+   width: 95%;
+   padding-bottom: 8.2rem;
+   position: relative;
+}
+
+.feature-box {
+   width: 32%;
+   text-align: center;
+
+   &:before {
+      display: block;
+      content: "";
+      background-color: $color-grey-icons;
+      width: 3.8rem;
+      height: 3.8rem;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-bottom: 2.2rem;
+   }
+
+   &__text {
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+   }
+}
+
+.feature-box:hover:before {
+   background-color: $color-primary;
+}

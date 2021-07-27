@@ -1,4 +1,5 @@
 .btn-text {
+   display: inline-block;
    color: $color-primary;
    font-weight: 700;
    text-decoration: none;
@@ -15,4 +16,5 @@
    font-weight: 700;
    text-decoration: none;
    padding: 1.3rem 3.5rem;
+   border-radius: 2%;
 }
