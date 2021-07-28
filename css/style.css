@@ -45,7 +45,7 @@ ul {
   display: inline-block;
   text-decoration: none; }
 
-.heading-primary, .heading-secondary, .heading-tertiary {
+.heading-primary, .heading-secondary, .heading-tertiary, .subheading {
   font-weight: 700; }
 
 .heading-primary {
@@ -61,14 +61,13 @@ ul {
   .heading-secondary--black {
     color: #000; }
 
-.heading-tertiary--main {
+.heading-tertiary {
   font-size: 2.4rem;
   margin-bottom: 2.3rem; }
-
-.heading-tertiary--small {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 1.6rem; }
+  .heading-tertiary--small {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem; }
 
 .subheading {
   display: block;
@@ -76,6 +75,10 @@ ul {
   color: #000;
   opacity: 0.5;
   margin-bottom: 1.5rem; }
+
+.paragraph {
+  font-size: 1.4rem;
+  line-height: 2.1rem; }
 
 .u-center-text {
   text-align: center !important; }
@@ -105,9 +108,7 @@ ul {
   display: inline-block;
   color: #be1d31;
   font-weight: 700;
-  text-decoration: none;
-  position: absolute;
-  bottom: 2.7rem; }
+  text-decoration: none; }
 
 .btn-big {
   display: inline-block;
@@ -121,8 +122,7 @@ ul {
   border-radius: 2%; }
 
 .section-oferta {
-  background-color: #fff;
-  position: relative; }
+  background-color: #fff; }
   .section-oferta::after {
     content: "";
     display: table;
@@ -134,16 +134,19 @@ ul {
 
 .oferta-box {
   width: 25%;
-  padding: 2.5rem; }
+  padding: 2.5rem;
+  position: relative; }
   .oferta-box:not(:last-child) {
     border-right: 1px solid #000; }
   .oferta-box__text {
-    position: relative;
     font-size: 1.4rem;
     font-weight: 700;
     color: #000;
     opacity: 0.5;
     padding-bottom: 6rem; }
+  .oferta-box__btn {
+    position: absolute;
+    bottom: 2.7rem; }
 
 .section-opinie {
   background-color: #fff;
@@ -174,20 +177,18 @@ ul {
 
 .section-features {
   background-color: #fff;
-  padding-top: 5.3rem; }
+  padding: 5.3rem 0 3rem 0; }
   .section-features__heading {
     padding-bottom: 4.5rem; }
   .section-features__btn {
-    left: 50%;
-    transform: translate(-50%); }
+    text-align: center;
+    padding-top: 3rem; }
 
 .features {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 95%;
-  padding-bottom: 8.2rem;
-  position: relative; }
+  width: 95%; }
 
 .feature-box {
   width: 32%;
@@ -201,9 +202,6 @@ ul {
     border-radius: 50%;
     margin: 0 auto;
     margin-bottom: 2.2rem; }
-  .feature-box__text {
-    font-size: 1.4rem;
-    line-height: 2.1rem; }
 
 .feature-box:hover:before {
   background-color: #be1d31; }
@@ -220,6 +218,19 @@ ul {
     color: #fff;
     font-size: 2.4rem;
     font-weight: 700; }
+
+.section-aktualnosci {
+  margin-bottom: 10.1rem;
+  background-color: #fff; }
+  .section-aktualnosci__heading {
+    padding: 5.5rem 0 3.5rem 0; }
+  .section-aktualnosci__btn {
+    text-align: center;
+    padding-bottom: 2.1rem;
+    margin-top: -0.5rem; }
+
+.aktualnosc-box {
+  padding: 2.8rem 3.2rem 4rem 2.2rem; }
 
 .row {
   max-width: 100rem;

@@ -1,14 +1,14 @@
 .section-features {
    background-color: $color-white;
-   padding-top: 5.3rem;  
+   padding: 5.3rem 0 3rem 0;  
    
    &__heading {
       padding-bottom: 4.5rem;
    }
    
    &__btn {
-      left: 50%;
-      transform: translate(-50%);
+      text-align: center;
+      padding-top: 3rem;
    }
 }
 
@@ -17,8 +17,6 @@
    justify-content: space-between;
    margin: 0 auto;
    width: 95%;
-   padding-bottom: 8.2rem;
-   position: relative;
 }
 
 .feature-box {
@@ -34,11 +32,6 @@
       border-radius: 50%;
       margin: 0 auto;
       margin-bottom: 2.2rem;
-   }
-
-   &__text {
-      font-size: 1.4rem;
-      line-height: 2.1rem;
    }
 }
 

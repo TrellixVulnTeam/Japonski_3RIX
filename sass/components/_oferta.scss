@@ -1,6 +1,5 @@
 .section-oferta {
    background-color: $color-white;;
-   position: relative;
    
    @include clearfix;
 }
@@ -13,18 +12,23 @@
 .oferta-box {
    width: 25%;
    padding: 2.5rem;
+   position: relative;
 
    &:not(:last-child) {
    border-right: 1px solid $color-black;
    }
 
    &__text {
-      position: relative;
       font-size: 1.4rem;
       font-weight: 700;
       color: $color-black;
       opacity: 0.5;
       padding-bottom: 6rem;
+   }
+
+   &__btn {
+      position: absolute;
+      bottom: 2.7rem;
    }
 }
 
