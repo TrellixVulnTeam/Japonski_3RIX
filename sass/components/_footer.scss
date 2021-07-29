@@ -1,0 +1,23 @@
+.footer {
+   background-color: $color-primary;
+   color: $color-white;
+   position: relative;
+   padding: 10rem 0;
+
+   &__textbox {
+      width: 40%;
+      margin: 0 auto;
+      text-align: center;
+   }
+   
+   &__paragraph {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 4.5rem;
+   }
+
+   &__btn {
+      padding: 1.3rem 8.8rem ;
+   }
+}
