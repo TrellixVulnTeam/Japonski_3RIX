@@ -1,7 +1,7 @@
 .header {
    background-color: $color-white;
-   position: relative;
    padding: 3.3rem 0 1rem 0;
+   position: relative;
    
    &__logo-box {
       position: absolute;
@@ -22,8 +22,22 @@
    }
 }
 
+
+
+// I level
+
 .navigation {
    padding-top: 5rem;
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+   }
+
+   & li {
+      position: relative;
+   }
 
    &__link {
       &:link,
@@ -33,22 +47,134 @@
       }
 
       &:hover {
-         transform: translateY(-3px);
-         text-shadow: 0 1rem 2rem $color-grey;
-         transition: all .3s ease;
-      }
-
-      &:active,
-      &:focus {
-         -webkit-transform: translateY(10px);
-         transform: translateY(-1px);
+         color: $color-primary;
+         transition: all 0.2s ease;
       }
    }
 }
 
+.navigation__list>li {
+   &:hover .submenu__list {
+      display: block;
+      transition: all 0.3s ease;
+   }
+}
+
+
+// II level
+
+.submenu__list {
+   min-width: 32rem;
+   min-height: 5.5rem;
+   position: absolute;
+   left: -8rem;
+   padding-top: 1.1rem;
+   z-index: 1000;
+   list-style: none;
+   display: none;
+
+   // all li
+   li {
+      height: 6rem;
+      display: flex;
+      align-items: center;
+      background-color: $color-white;
+      position: relative;
+
+      &:hover {
+         background-color: $color-grey-links;
+         transition: all 0.3s ease;
+
+         .sub-submenu__list {
+            display: block;
+            transition: all 0.3s ease;
+         }
+      }
+   }
+
+   // submenu li
+   &>li {
+      &:after {
+         content:"";
+         width:0;
+         height:0;
+         border-top: 0.9rem solid transparent;
+         border-bottom: 0.9rem solid transparent;
+         border-left: 0.9rem solid $color-primary;
+         right: 7%;
+         position: absolute;
+         opacity: 0;
+      }
+   
+      &:hover {
+         &:after {
+            opacity: 1;
+            transition: all 0.3s ease;
+         }
+
+         .submenu__link {
+            color: $color-primary;
+            transition: all 0.3s ease;
+         }
+      }
+   }
+}
+
+.submenu__link {
+   color: $color-black;
+   display: inline-block;
+   font-weight: 700;
+   padding-left: 2.5rem;
+}
+
+
+// III level
+
+.sub-submenu__list {
+   position: absolute;
+   top: 0;
+   left: 100.5%;
+   min-width: 32rem;
+   display: none;
+
+   li {
+      height: 6rem;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+         background-color: $color-grey-links;
+         transition: all 0.3s ease;
+
+         .sub-submenu__link {
+            color: $color-primary;
+            transition: all 0.3s ease;
+         }
+      }
+   }
+}
+
+.sub-submenu__link {
+   color: $color-black;
+   display: inline-block;
+   font-size: 1.6rem;
+   padding-left: 2.5rem;
+}
+
+
+
+
+// Contacts
+
 .contacts {
    max-width: 45%;
    margin-left: auto;
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+   }
 
    &__link {
       &:link,
@@ -66,8 +192,7 @@
          border-bottom: 1.5px solid $color-primary;
          opacity: 100%;
          padding-bottom: 1rem;
-         transition: all .3s ease;
+         transition: all 0.3s ease;
       }
    }
 }
-

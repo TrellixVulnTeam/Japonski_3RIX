@@ -37,4 +37,5 @@
 
 .feature-box:hover:before {
    background-color: $color-primary;
+   transition: all 0.3s ease;
 }
