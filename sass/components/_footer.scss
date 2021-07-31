@@ -4,6 +4,10 @@
    position: relative;
    padding: 10rem 0;
 
+   @include respond (phone) {
+      padding: 4rem 0;
+   }
+
    &__textbox {
       width: 40%;
       margin: 0 auto;

@@ -131,10 +131,6 @@ body {
     color: #be1d31;
     transition: all 0.2s ease; }
 
-.navigation__list > li:hover .submenu__list {
-  display: block;
-  transition: all 0.3s ease; }
-
 .submenu__list {
   min-width: 32rem;
   min-height: 5.5rem;
@@ -205,6 +201,9 @@ body {
 .contacts {
   max-width: 45%;
   margin-left: auto; }
+  @media only screen and (max-width: 37.5em) {
+    .contacts {
+      max-width: 100%; } }
   .contacts__list {
     display: flex;
     justify-content: space-between;
@@ -222,6 +221,9 @@ body {
     opacity: 100%;
     padding-bottom: 1rem;
     transition: all 0.3s ease; }
+
+body.mouse .navigation__list > li:hover .submenu__list {
+  display: block; }
 
 .btn-text {
   display: inline-block;
@@ -250,6 +252,9 @@ body {
 .oferty {
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 37.5em) {
+    .oferty {
+      flex-wrap: wrap; } }
 
 .oferta-box {
   width: 25%;
@@ -257,6 +262,9 @@ body {
   position: relative; }
   .oferta-box:not(:last-child) {
     border-right: 1px solid #000; }
+  @media only screen and (max-width: 37.5em) {
+    .oferta-box {
+      width: 50%; } }
   .oferta-box__text {
     font-size: 1.4rem;
     font-weight: 700;
@@ -271,12 +279,15 @@ body {
   background-color: #fff;
   padding: 6.8rem 0;
   border-bottom: 1px solid #7a7a7a; }
+  @media only screen and (max-width: 37.5em) {
+    .section-opinie {
+      padding: 4rem 0; } }
   .section-opinie__paragraph {
     font-style: italic;
     padding-bottom: 2rem; }
 
 .opinia {
-  width: 95%;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
   position: relative; }
@@ -308,10 +319,21 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   width: 95%; }
+  @media only screen and (max-width: 37.5em) {
+    .features {
+      flex-wrap: wrap; } }
 
 .feature-box {
   width: 32%;
   text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .feature-box {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .feature-box__heading {
+      text-align: center; } }
   .feature-box:before {
     display: block;
     content: "";
@@ -321,6 +343,9 @@ body {
     border-radius: 50%;
     margin: 0 auto;
     margin-bottom: 2.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .feature-box:before {
+        margin-bottom: 1rem; } }
 
 .feature-box:hover:before {
   background-color: #be1d31;
@@ -334,10 +359,20 @@ body {
   padding: 3rem; }
   .section-promocja__heading {
     padding-bottom: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .section-promocja__heading {
+        padding-bottom: 2rem; } }
   .section-promocja__paragraph {
     color: #fff;
     font-size: 2.4rem;
     font-weight: 700; }
+    @media only screen and (max-width: 37.5em) {
+      .section-promocja__paragraph {
+        padding-bottom: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-promocja {
+      flex-direction: column;
+      text-align: center; } }
 
 .section-aktualnosci {
   margin-bottom: 10.1rem;
@@ -351,12 +386,18 @@ body {
 
 .aktualnosc-box {
   padding: 2.8rem 3.2rem 4rem 2.2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .aktualnosc-box {
+      padding: 2.8rem 3.2rem 2rem 2.2rem; } }
 
 .footer {
   background-color: #be1d31;
   color: #fff;
   position: relative;
   padding: 10rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      padding: 4rem 0; } }
   .footer__textbox {
     width: 40%;
     margin: 0 auto;
