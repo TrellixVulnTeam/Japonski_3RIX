@@ -8,7 +8,7 @@
    display: flex;
    justify-content: space-between;
 
-   @include respond (phone) {
+   @include respond (tab-port) {
       flex-wrap: wrap;
    }
 }
@@ -22,7 +22,7 @@
    border-right: 1px solid $color-black;
    }
 
-   @include respond (phone) {
+   @include respond (tab-port) {
       width: 50%;
    }
 
