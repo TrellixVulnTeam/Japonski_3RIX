@@ -172,14 +172,13 @@
 }
 
 .submenu__arrow {
-   right: 5%;
+   right: 50%;
 }
 
 .arrow {
    display: none;
    position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
+   top: 0;
    width: 0;
    height: 0;
    border-top: 10px solid #000;
