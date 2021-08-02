@@ -4,6 +4,10 @@
    
    &__heading {
       padding-bottom: 4.5rem;
+
+      @include respond (phone) {
+         padding-bottom: 2rem;
+      }
    }
    
    &__btn {
@@ -30,7 +34,7 @@
    @include respond (phone) {
       width: 100%;
       text-align: left;
-      margin-bottom: 2rem;
+      padding: 2rem;
    }
 
    &__heading {

@@ -15,4 +15,9 @@
    text-decoration: none;
    padding: 1.3rem 3.5rem;
    border-radius: 2%;
+
+   @include respond (phone) {
+      font-size: 2rem;
+      padding: 1rem 3.2rem;
+   }
 }

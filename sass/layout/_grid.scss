@@ -2,8 +2,13 @@
    max-width: $grid-width;
    margin: 0 auto;
 
+   @include respond(tab-port) {
+      max-width: 80rem;
+      padding: 1.5rem;
+   }
+
    @include respond(phone) {
-      max-width: none;
+      max-width: 50rem;
       padding: 1.5rem;
    }
 
@@ -18,10 +23,6 @@
 
    @include respond(tab-land) {
       padding: 0 3rem;
-   }
-
-   @include respond(tab-port) {
-      max-width: 50rem;
    }
 
    @include clearfix;
