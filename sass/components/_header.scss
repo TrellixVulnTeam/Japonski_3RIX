@@ -34,6 +34,12 @@
       @include respond(phone) {
          display: block;
       }
+
+      li {
+         @include respond(phone) {
+            margin-bottom: 1rem;
+         }
+      }
    }
 
    & li {
@@ -67,6 +73,11 @@
       align-items: center;
       background-color: $color-white;
       position: relative;
+
+      @include respond(phone) {
+         height: 3rem;
+         margin-bottom: 1rem;
+      }
 
       &:hover {
          background-color: $color-grey-links;
