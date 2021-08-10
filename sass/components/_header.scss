@@ -2,7 +2,7 @@
    background-color: $color-white;
    padding: 3.3rem 0 1rem 0;
    position: relative;
-   
+
    &__logo-box {
       position: absolute;
       top: 3.5rem;
@@ -34,12 +34,6 @@
       @include respond(phone) {
          display: block;
       }
-
-      li {
-         @include respond(phone) {
-            margin-bottom: 1rem;
-         }
-      }
    }
 
    & li {
@@ -47,6 +41,7 @@
    }
 
    &__link {
+
       &:link,
       &:visited {
          font-weight: 700;
@@ -55,71 +50,124 @@
 
       &:hover {
          color: $color-primary;
-         transition: all 0.2s ease;
-      }
-   }
-}
-
-
-
-.submenu__list,  .sub-submenu__list {
-   position: absolute;
-   min-width: 32rem;
-   display: none;
-
-   li {
-      height: 6rem;
-      display: flex;
-      align-items: center;
-      background-color: $color-white;
-      position: relative;
-
-      @include respond(phone) {
-         height: 3rem;
-         margin-bottom: 1rem;
-      }
-
-      &:hover {
-         background-color: $color-grey-links;
          transition: all 0.3s ease;
       }
+
+      @include respond(phone) {
+         height: 4rem;
+         line-height: 4rem;
+      }
    }
 }
 
-.submenu__list {
+
+.submenu,
+.sub-submenu {
+   // display: none;
+   position: absolute;
+   min-width: 32rem;
+   list-style: none;
+
+   li {
+      background-color: $color-white;
+      align-items: center;
+      position: relative;
+   }
+
+   &__link {
+      height: 6rem;
+      line-height: 6rem;
+      color: $color-black;
+      display: inline-block;
+      padding-left: 2.5rem;
+
+      @include respond(phone) {
+         height: 4rem;
+         line-height: 4rem;
+      }
+   }
+}
+
+.submenu {
    left: -8rem;
    padding-top: 1.1rem;
    z-index: 1000;
-   list-style: none;
 
    @include respond(phone) {
       position: relative;
       top: 0;
       left: 0;
+      padding-top: 0;
    }
 
-   li:hover {
+   &>li:hover {
       .submenu__link {
          color: $color-primary;
          transition: all 0.3s ease;
       }
    }
 
-   // ARROWS
+   &>li:hover {
+      background-color: $color-grey-links;
+      transition: all 0.3s ease;
+   }
+
+   &__link {
+      font-weight: 700;
+
+      // &:hover .submenu>li {
+      //    background-color: $color-grey-links;
+      // }
+   }
+}
+
+.sub-submenu {
+   top: 0;
+   left: 100.5%;
+
+   &>li:hover {
+      background-color: $color-grey-links;
+      transition: all 0.3s ease;
+
+      .sub-submenu__link {
+         color: $color-primary;
+         transition: all 0.3s ease;
+      }
+   }
+
+   &__link {
+      font-size: 1.6rem;
+   }
+
+   @include respond(phone) {
+      position: relative;
+      top: 0;
+      left: 0;
+   }
+}
+
+
+//ARROWS
+.submenu {
    &>li {
       &:after {
-         display: none;
-         content:"";
-         width:0;
-         height:0;
+         content: "";
+         width: 0;
+         height: 0;
          border-top: 0.9rem solid transparent;
          border-bottom: 0.9rem solid transparent;
          border-left: 0.9rem solid $color-primary;
-         right: 7%;
          position: absolute;
          opacity: 0;
+         top: 50%;
+         transform: translateY(-50%);
+         left: 90%;
+
+         @include respond(phone) {
+            display: none;
+         }
       }
-   
+
       &:hover {
          &:after {
             opacity: 1;
@@ -129,86 +177,27 @@
    }
 }
 
-.sub-submenu__list {
-   top: 0;
-   left: 100.5%; 
-
-   @include respond(phone) {
-      position: relative;
-      top: 0;
-      left: 0;
-   }
-   
-   li:hover {
-      .sub-submenu__link {
-         color: $color-primary;
-         transition: all 0.3s ease;
-      }
-   }
-}
-
-.submenu__link {
-   color: $color-black;
-   display: inline-block;
-   font-weight: 700;
-   padding-left: 2.5rem;
-}
-.sub-submenu__link {
-   color: $color-black;
-   display: inline-block;
-   font-size: 1.6rem;
-   padding-left: 2.5rem;
-}
-
-
-
-// FUNCTIONALITY
-.navigation__arrow {
-  right: -30%;
-
-  @include respond(phone) {
-     right: 50%;
-  }
-}
-
-.submenu__arrow {
-   right: 50%;
-}
-
-.arrow {
-   display: none;
-   position: absolute;
-   top: 0;
-   width: 0;
-   height: 0;
-   border-top: 10px solid #000;
-   border-right: 10px solid transparent;
-   border-left: 10px solid transparent;
-
-
-   &.active {
-      transform: rotate(-180deg);
-      transition: all 0.3s ease;
-   }
-}
 
 // DESKTOP
 
-body.mouse .navigation__list>li:hover .submenu__list {
+body.mouse .navigation__list>li:hover .submenu {
    display: block;
 }
-body.mouse .submenu__list>li:hover .sub-submenu__list {
+
+body.mouse .submenu>li:hover .sub-submenu {
    display: block;
 }
 
 // MOBILE
 
-body.touch .submenu__list.open {
+body.touch .submenu.open {
    display: block;
 }
-body.touch .sub-submenu__list.open {
+
+body.touch .sub-submenu.open {
    display: block;
 }
+
 body.touch .arrow {
    display: block;
 }
@@ -231,6 +220,7 @@ body.touch .arrow {
    }
 
    &__link {
+
       &:link,
       &:visited {
          font-size: 1.4rem;

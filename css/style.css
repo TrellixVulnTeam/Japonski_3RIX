@@ -135,9 +135,6 @@ body {
     @media only screen and (max-width: 37.5em) {
       .navigation__list {
         display: block; } }
-    @media only screen and (max-width: 37.5em) {
-      .navigation__list li {
-        margin-bottom: 1rem; } }
   .navigation li {
     position: relative; }
   .navigation__link:link, .navigation__link:visited {
@@ -145,110 +142,101 @@ body {
     color: #000; }
   .navigation__link:hover {
     color: #be1d31;
-    transition: all 0.2s ease; }
+    transition: all 0.3s ease; }
+  @media only screen and (max-width: 37.5em) {
+    .navigation__link {
+      height: 4rem;
+      line-height: 4rem; } }
 
-.submenu__list, .sub-submenu__list {
+.submenu,
+.sub-submenu {
   position: absolute;
   min-width: 32rem;
-  display: none; }
-  .submenu__list li, .sub-submenu__list li {
-    height: 6rem;
-    display: flex;
-    align-items: center;
+  list-style: none; }
+  .submenu li,
+  .sub-submenu li {
     background-color: #fff;
+    align-items: center;
     position: relative; }
+  .submenu__link,
+  .sub-submenu__link {
+    height: 6rem;
+    line-height: 6rem;
+    color: #000;
+    display: inline-block;
+    padding-left: 2.5rem; }
     @media only screen and (max-width: 37.5em) {
-      .submenu__list li, .sub-submenu__list li {
-        height: 3rem;
-        margin-bottom: 1rem; } }
-    .submenu__list li:hover, .sub-submenu__list li:hover {
-      background-color: #ededed;
-      transition: all 0.3s ease; }
+      .submenu__link,
+      .sub-submenu__link {
+        height: 4rem;
+        line-height: 4rem; } }
 
-.submenu__list {
+.submenu {
   left: -8rem;
   padding-top: 1.1rem;
-  z-index: 1000;
-  list-style: none; }
+  z-index: 1000; }
   @media only screen and (max-width: 37.5em) {
-    .submenu__list {
+    .submenu {
       position: relative;
       top: 0;
-      left: 0; } }
-  .submenu__list li:hover .submenu__link {
+      left: 0;
+      padding-top: 0; } }
+  .submenu > li:hover .submenu__link {
     color: #be1d31;
     transition: all 0.3s ease; }
-  .submenu__list > li:after {
-    display: none;
-    content: "";
-    width: 0;
-    height: 0;
-    border-top: 0.9rem solid transparent;
-    border-bottom: 0.9rem solid transparent;
-    border-left: 0.9rem solid #be1d31;
-    right: 7%;
-    position: absolute;
-    opacity: 0; }
-  .submenu__list > li:hover:after {
-    opacity: 1;
+  .submenu > li:hover {
+    background-color: #ededed;
     transition: all 0.3s ease; }
+  .submenu__link {
+    font-weight: 700; }
 
-.sub-submenu__list {
+.sub-submenu {
   top: 0;
   left: 100.5%; }
+  .sub-submenu > li:hover {
+    background-color: #ededed;
+    transition: all 0.3s ease; }
+    .sub-submenu > li:hover .sub-submenu__link {
+      color: #be1d31;
+      transition: all 0.3s ease; }
+  .sub-submenu__link {
+    font-size: 1.6rem; }
   @media only screen and (max-width: 37.5em) {
-    .sub-submenu__list {
+    .sub-submenu {
       position: relative;
       top: 0;
       left: 0; } }
-  .sub-submenu__list li:hover .sub-submenu__link {
-    color: #be1d31;
-    transition: all 0.3s ease; }
 
-.submenu__link {
-  color: #000;
-  display: inline-block;
-  font-weight: 700;
-  padding-left: 2.5rem; }
-
-.sub-submenu__link {
-  color: #000;
-  display: inline-block;
-  font-size: 1.6rem;
-  padding-left: 2.5rem; }
-
-.navigation__arrow {
-  right: -30%; }
-  @media only screen and (max-width: 37.5em) {
-    .navigation__arrow {
-      right: 50%; } }
-
-.submenu__arrow {
-  right: 50%; }
-
-.arrow {
-  display: none;
-  position: absolute;
-  top: 0;
+.submenu > li:after {
+  content: "";
   width: 0;
   height: 0;
-  border-top: 10px solid #000;
-  border-right: 10px solid transparent;
-  border-left: 10px solid transparent; }
-  .arrow.active {
-    transform: rotate(-180deg);
-    transition: all 0.3s ease; }
+  border-top: 0.9rem solid transparent;
+  border-bottom: 0.9rem solid transparent;
+  border-left: 0.9rem solid #be1d31;
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 90%; }
+  @media only screen and (max-width: 37.5em) {
+    .submenu > li:after {
+      display: none; } }
 
-body.mouse .navigation__list > li:hover .submenu__list {
+.submenu > li:hover:after {
+  opacity: 1;
+  transition: all 0.3s ease; }
+
+body.mouse .navigation__list > li:hover .submenu {
   display: block; }
 
-body.mouse .submenu__list > li:hover .sub-submenu__list {
+body.mouse .submenu > li:hover .sub-submenu {
   display: block; }
 
-body.touch .submenu__list.open {
+body.touch .submenu.open {
   display: block; }
 
-body.touch .sub-submenu__list.open {
+body.touch .sub-submenu.open {
   display: block; }
 
 body.touch .arrow {
