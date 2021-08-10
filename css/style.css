@@ -308,11 +308,11 @@ body.touch .arrow {
   position: relative; }
   .oferta-box:not(:last-child) {
     border-right: 1px solid #000; }
-  .oferta-box:nth-child(-n + 2) {
-    border-bottom: 1px solid #000; }
   @media only screen and (max-width: 56.25em) {
     .oferta-box {
-      width: 50%; } }
+      width: 50%; }
+      .oferta-box:nth-child(-n + 2) {
+        border-bottom: 1px solid #000; } }
   .oferta-box__text {
     font-size: 1.4rem;
     font-weight: 700;
