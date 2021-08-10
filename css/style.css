@@ -112,18 +112,16 @@ body {
 .header {
   background-color: #fff;
   padding: 3.3rem 0 1rem 0;
-  position: relative; }
+  display: flex; }
   .header__logo-box {
-    position: absolute;
-    top: 3.5rem;
-    left: 3.5rem; }
+    width: 10%; }
   .header__logo {
     width: 8.4rem;
     height: 8.4rem;
     border-radius: 50%;
     background-color: #be1d31; }
   .header__textbox {
-    max-width: 80%;
+    width: 90%;
     margin: 0 auto; }
 
 .navigation {
@@ -150,13 +148,13 @@ body {
 
 .submenu,
 .sub-submenu {
+  display: none;
   position: absolute;
   min-width: 32rem;
   list-style: none; }
   .submenu li,
   .sub-submenu li {
     background-color: #fff;
-    align-items: center;
     position: relative; }
   .submenu__link,
   .sub-submenu__link {
@@ -247,7 +245,10 @@ body.touch .arrow {
   margin-left: auto; }
   @media only screen and (max-width: 56.25em) {
     .contacts {
-      max-width: 100%; } }
+      max-width: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    .contacts {
+      max-width: 75%; } }
   .contacts__list {
     display: flex;
     justify-content: space-between;
@@ -307,6 +308,8 @@ body.touch .arrow {
   position: relative; }
   .oferta-box:not(:last-child) {
     border-right: 1px solid #000; }
+  .oferta-box:nth-child(-n + 2) {
+    border-bottom: 1px solid #000; }
   @media only screen and (max-width: 56.25em) {
     .oferta-box {
       width: 50%; } }

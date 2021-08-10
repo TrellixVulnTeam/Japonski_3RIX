@@ -1,12 +1,10 @@
 .header {
    background-color: $color-white;
    padding: 3.3rem 0 1rem 0;
-   position: relative;
+   display: flex;
 
    &__logo-box {
-      position: absolute;
-      top: 3.5rem;
-      left: 3.5rem;
+      width: 10%;
    }
 
    &__logo {
@@ -17,7 +15,7 @@
    }
 
    &__textbox {
-      max-width: 80%;
+      width: 90%;
       margin: 0 auto;
    }
 }
@@ -63,14 +61,13 @@
 
 .submenu,
 .sub-submenu {
-   // display: none;
+   display: none;
    position: absolute;
    min-width: 32rem;
    list-style: none;
 
    li {
       background-color: $color-white;
-      align-items: center;
       position: relative;
    }
 
@@ -210,7 +207,11 @@ body.touch .arrow {
    margin-left: auto;
 
    @include respond (tab-port) {
-      max-width: 100%;
+      max-width: 50%;
+   }
+
+   @include respond (phone) {
+      max-width: 75%;
    }
 
    &__list {

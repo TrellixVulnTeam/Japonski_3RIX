@@ -1,6 +1,7 @@
 .section-oferta {
-   background-color: $color-white;;
-   
+   background-color: $color-white;
+   ;
+
    @include clearfix;
 }
 
@@ -19,7 +20,11 @@
    position: relative;
 
    &:not(:last-child) {
-   border-right: 1px solid $color-black;
+      border-right: 1px solid $color-black;
+   }
+
+   &:nth-child(-n + 2) {
+      border-bottom: 1px solid #000;
    }
 
    @include respond (tab-port) {
@@ -39,4 +44,3 @@
       bottom: 2.7rem;
    }
 }
-
